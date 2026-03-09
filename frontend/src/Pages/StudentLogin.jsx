@@ -9,9 +9,7 @@ const StudentLogin = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/students/login",
-        { username, password }
-      );
+      const res = await axios.post("http://localhost:5000/api/students/login",{ username, password });
 
       if (res.data.success) {
         window.location.href = "/chatbot";
