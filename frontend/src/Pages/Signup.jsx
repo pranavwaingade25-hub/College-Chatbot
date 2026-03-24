@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 import "../Style/Signup.css";
 
 const Signup = () => {
@@ -38,6 +39,8 @@ const Signup = () => {
   };
 
   return (
+  <>
+     <Navbar/>
     <div className="signup-center">
       <div className="signup-card">
         <h3>Create Student Account</h3>
@@ -89,6 +92,7 @@ const Signup = () => {
         <a href="/">Back to Home</a>
       </div>
     </div>
+  </>
   );
 };
 

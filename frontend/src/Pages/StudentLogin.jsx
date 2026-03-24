@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 import "../Style/StudentLogin.css";
 
 const StudentLogin = () => {
@@ -20,6 +21,8 @@ const StudentLogin = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="login-center">
       <div className="login-card">
         <div className="login-header">
@@ -45,6 +48,7 @@ const StudentLogin = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

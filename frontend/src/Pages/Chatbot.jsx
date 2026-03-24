@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 import "../Style/Chatbot.css";
 
 const Chatbot = () => {
@@ -30,6 +31,8 @@ const Chatbot = () => {
   }, [messages]);
 
   return (
+   <>
+    <Navbar/>
     <div className="chat-center">
       <div className="chat-card">
         <div className="chat-header">
@@ -60,6 +63,7 @@ const Chatbot = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

@@ -1,9 +1,14 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import "../Style/Home.css";
 
 const Home = () => {
   return (
+  <> 
+     <Navbar/> 
     <div className="home-parent">
+      
+      
       <div className="home-card">
 
         {/* HEADER */}
@@ -48,6 +53,7 @@ const Home = () => {
 
       </div>
     </div>
+  </>
   );
 };
 

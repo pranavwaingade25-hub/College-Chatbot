@@ -1,0 +1,63 @@
+/* ===============================
+   NAVBAR - PREMIUM STYLE
+   =============================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 40px;
+
+  background: rgba(18, 24, 43, 0.7); /* glass effect */
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #5B8CFF, #8BE9FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+/* LINKS */
+.nav-links li a {
+  text-decoration: none;
+  color: #E6E9F0;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* HOVER */
+.nav-links li a:hover {
+  color: #8BE9FD;
+}
+
+/* 🔥 UNDERLINE ANIMATION */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #5B8CFF, #8BE9FD);
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}

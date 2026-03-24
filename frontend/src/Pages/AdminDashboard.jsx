@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 import '../Style/adminDashboard.css';
  
 const AdminDashboard = () => {
@@ -46,6 +47,8 @@ const AdminDashboard = () => {
   };
 
   return (
+   <>
+   <Navbar/>
     <div className="admin-center">
       <div className="admin-card">
         <div className="admin-header">
@@ -128,6 +131,7 @@ const AdminDashboard = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import '../Style/Adminlogin.css';
+import Navbar from "../components/Navbar";
 
 const AdminLogin = () => {
   const [username, setUsername] = useState("");
@@ -23,6 +24,8 @@ const AdminLogin = () => {
   };
 
   return (
+  <>
+  <Navbar/>
     <div className="login-center">
       <div className="login-card">
         <h3>Admin Login</h3>
@@ -41,6 +44,7 @@ const AdminLogin = () => {
         <button onClick={handleLogin}>Login</button>
       </div>
     </div>
+  </>
   );
 };
 

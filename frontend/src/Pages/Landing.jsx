@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import "../Style/Landing.css";
 
 export default function Landing() {
@@ -7,16 +8,8 @@ export default function Landing() {
     return (
         <div className="landing">
             {/* 🔷 Navbar */}
-            <nav className="navbar">
-                <div className="logo">🤖 College Chatbot</div>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="/signup">Register</a></li>
-                    <li><a href="/student-login">Login</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="/admin-login">Admin</a></li>
-                </ul>
-            </nav>
+            <Navbar />
+           
 
             {/* 🔷 Hero Section */}
             <section className="hero">

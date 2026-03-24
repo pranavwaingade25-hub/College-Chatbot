@@ -1,103 +1,109 @@
 /* ===============================
-   StudentLogin.css
+   STUDENT LOGIN - MATCHED UI
    =============================== */
-
-* {
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .login-center {
   height: 100vh;
-  width: 100%;
-  background: linear-gradient(135deg, #1d2671, #c33764);
+  background: radial-gradient(circle at top, #1F2A44, #0B0F1A);
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Card */
+/* 💎 SAME CARD AS HOME */
 .login-card {
-  width: 360px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  animation: fadeIn 0.6s ease-in-out;
+  width: 400px; /* same as home */
+
+  border-radius: 20px; /* same */
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 40px rgba(91,140,255,0.3),
+    0 20px 80px rgba(0,0,0,0.8);
+
+  animation: float 5s ease-in-out infinite; /* SAME animation */
 }
 
-/* Header */
+/* HEADER */
 .login-header {
- /* background: linear-gradient(135deg, #1d2671, #c33764); */
-  padding: 20px;
   text-align: center;
-  color: #fff;
+  padding: 25px;
 }
 
 .login-header h3 {
-  margin: 0;
-  font-size: 22px;
-  letter-spacing: 0.5px;
+  font-size: 26px;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #5B8CFF, #8BE9FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Body */
+/* BODY */
 .login-body {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
-/* Inputs */
+/* INPUT */
 .login-body input {
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  outline: none;
-  transition: 0.3s ease;
+  padding: 14px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.05);
+  color: #E6E9F0;
+
+  transition: 0.3s;
 }
 
 .login-body input:focus {
-  border-color: #1d2671;
-  box-shadow: 0 0 0 2px rgba(29, 38, 113, 0.15);
+  border-color: #5B8CFF;
+  box-shadow: 0 0 12px rgba(91,140,255,0.6);
+  outline: none;
 }
 
-/* Error message */
-.error {
-  color: #e53935;
-  font-size: 13px;
-  text-align: center;
-  margin-top: -5px;
-}
-
-/* Button */
+/* BUTTON (SAME AS HOME PRIMARY) */
 .login-body button {
-  margin-top: 10px;
-  padding: 12px;
-  background: linear-gradient(135deg, #1d2671, #c33764);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
+  padding: 14px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #5B8CFF, #8BE9FD);
+  color: #0B0F1A;
+
   font-weight: 600;
+  border: none;
   cursor: pointer;
-  transition: 0.3s ease;
+
+  box-shadow: 0 0 20px rgba(139,233,253,0.5);
+
+  transition: 0.3s;
 }
 
 .login-body button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(139,233,253,0.9);
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ERROR */
+.error {
+  color: #FF7A5C;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ✨ SAME FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }
