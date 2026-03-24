@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
+    no-repeat center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  top: 40%;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  width: max-content;
+  margin: 10px;
+  height: 35px;
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: medium;
+}
+.btn:hover{
+    background-color: #0096b0;
+}
+
+.primary {
+  background: #06b6d4;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+/* Modules */
+.modules {
+  padding: 50px;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #1e293b;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* Process */
+.process {
+  padding: 50px;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step {
+  background: #1e293b;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
