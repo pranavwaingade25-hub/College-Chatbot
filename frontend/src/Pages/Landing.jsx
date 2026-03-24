@@ -6,92 +6,110 @@ export default function Landing() {
 
     return (
         <div className="landing">
-      {/* 🔷 Navbar */}
-      <nav className="navbar">
-        <div className="logo">🚌 College Chatbot</div>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="/signup">Register</a></li>
-          <li><a href="/student-login">Login</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="/admin-login">Admin</a></li>
-        </ul>
-      </nav>
+            {/* 🔷 Navbar */}
+            <nav className="navbar">
+                <div className="logo">🤖 College Chatbot</div>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="/signup">Register</a></li>
+                    <li><a href="/student-login">Login</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="/admin-login">Admin</a></li>
+                </ul>
+            </nav>
 
-      {/* 🔷 Hero Section */}
-      <section className="hero">
-        <div className="overlay"></div>
-        <div className="hero-content">
-          <h1>Smart Student Bus Pass System</h1>
-          <p>
-            Apply for bus passes online, make payments through UPI QR,
-            get a digital pass, renew passes, and manage applications.
-          </p>
+            {/* 🔷 Hero Section */}
+            <section className="hero">
+                <div className="overlay"></div>
+                <div className="hero-content">
+                    <h1>Smart Institute Smart Communication</h1>
+                    <p>
+                        Ask college-related questions instantly, get accurate answers,
+                        access study materials, stay updated with notices, and interact with an chatbot anytime.
+                    </p>
 
-          <div className="buttons">
-            <button
-              className="btn primary"
-              onClick={() => navigate("/home")}
-            >
-              Get Started
-            </button>
-          </div>
-        </div>
-      </section>
+                    <div className="buttons">
+                        <button
+                            className="btn primary"
+                            onClick={() => navigate("/home")}
+                        >
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-      {/* 🔷 System Modules */}
-      <section className="modules">
-        <h2>System Modules</h2>
+            {/* 🔷 System Modules */}
+            <section className="modules">
+                <h1>System Modules</h1> <br />
 
-        <div className="card-container">
-          <div className="card">
-            <h3>User / Student Module</h3>
-            <p>Register, login, apply, track status and digital pass.</p>
-          </div>
+                <div className="card-container">
 
-          <div className="card">
-            <h3>Admin Module</h3>
-            <p>Approve/reject applications and manage records.</p>
-          </div>
+                    <div className="card">
+                        <h2>Student Module</h2> <br />
+                        <p>
+                            Students can ask queries, access study materials, view notices,
+                            and interact with the AI chatbot.
+                        </p>
+                    </div>
 
-          <div className="card">
-            <h3>Payment Module</h3>
-            <p>UPI QR payments (GPay, PhonePe, Paytm).</p>
-          </div>
+                    <div className="card">
+                        <h2>Admin Module</h2> <br />
+                        <p>
+                            Admin can manage FAQs, upload study resources,
+                            post notices, and control chatbot responses.
+                        </p>
+                    </div>
 
-          <div className="card">
-            <h3>Discount Logic</h3>
-            <p>Daily, monthly and quarterly discounts.</p>
-          </div>
+                    <div className="card">
+                        <h2>Chatbot Module</h2> <br />
+                        <p>
+                            Provides instant answers to student queries using
+                            keyword matching processing.
+                        </p>
+                    </div>
 
-          <div className="card">
-            <h3>Digital Pass</h3>
-            <p>QR-based student pass with validation.</p>
-          </div>
+                    <div className="card">
+                        <h2>Knowledge Base</h2><br />
+                        <p>
+                            Stores academic data like syllabus, timetable,
+                            and FAQs for quick retrieval by the chatbot.
+                        </p>
+                    </div>
 
-          <div className="card">
-            <h3>College-wise Admin</h3>
-            <p>View students college-wise with details.</p>
-          </div>
-        </div>
-      </section>
+                    <div className="card">
+                        <h2>Notification System</h2><br />
+                        <p >
+                            Displays latest college announcements, events,
+                            and important updates for students.
+                        </p>
+                    </div>
 
-      {/* 🔷 Working Process */}
-      <section className="process">
-        <h2>Working Process</h2>
+                    <div className="card">
+                        <h2>User Authentication</h2> <br />
+                        <p>
+                            Secure login and registration system for students
+                            and admin with role-based access.
+                        </p>
+                    </div>
 
-        <div className="steps">
-          <div className="step">1. Register</div>
-          <div className="step">2. Login</div>
-          <div className="step">3. Select Plan</div>
-          <div className="step">4. Fill Details</div>
-          <div className="step">5. Generate QR</div>
-          <div className="step">6. Payment</div>
-          <div className="step">7. Approval</div>
-          <div className="step">8. Get Pass</div>
-        </div>
-      </section>
-            
+                </div>
+            </section>
+            {/* 🔷 Working Process */}
+            <section className="process">
+                <h1>Working Process</h1> <br />
+
+                <div className="steps">
+                    <div className="step">1. User Login</div>
+                    <div className="step">2. Access Chatbot</div>
+                    <div className="step">3. Enter Query</div>
+                    <div className="step">4. keyword macthes Processing</div>
+                    <div className="step">5. Knowledge Base Search</div>
+                    <div className="step">6. chatbot Response Generation</div>
+                    <div className="step">7. Display Result</div>
+                </div>
+            </section>
+
 
         </div>
     );
