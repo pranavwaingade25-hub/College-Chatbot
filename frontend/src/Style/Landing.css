@@ -1,27 +1,29 @@
 /* ===============================
-   Landing.css (Blue Eclipse Theme)
-   =============================== */
+   LANDING - SAME UI SYSTEM
+=============================== */
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 /* 🌌 BACKGROUND */
 body {
-  background: linear-gradient(135deg, #0F0E47, #272757);
-  color: #ffffff;
+  background: radial-gradient(circle at top, #1F2A44, #0B0F1A);
+  color: #E6E9F0;
 }
 
-/* ===== NAVBAR (MATCH YOUR NEW ONE) ===== */
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 15px 40px;
 
-  background: rgba(39, 39, 87, 0.9);
-  backdrop-filter: blur(10px);
+  background: rgba(18, 24, 43, 0.7);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .navbar ul {
@@ -34,35 +36,36 @@ body {
 }
 
 .navbar a {
-  color: #8686AC;
+  color: #E6E9F0;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .navbar a:hover {
-  color: #ffffff;
+  color: #8BE9FD;
 }
 
 /* ===== HERO ===== */
 .hero {
   height: 90vh;
+  position: relative;
+
   background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
     no-repeat center/cover;
-  position: relative;
 }
 
-/* 🔥 FIXED OVERLAY */
+/* 🔥 DARK GLASS OVERLAY */
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
 
-  /* LIGHTER + GRADIENT OVERLAY */
   background: linear-gradient(
-    rgba(15, 14, 71, 0.4),
-    rgba(39, 39, 87, 0.5)
+    rgba(11, 15, 26, 0.7),
+    rgba(31, 42, 68, 0.8)
   );
 }
+
 /* HERO CONTENT */
 .hero-content {
   position: relative;
@@ -72,84 +75,93 @@ body {
 
 .hero h1 {
   font-size: 42px;
-  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #5B8CFF, #8BE9FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
   margin: 20px 0;
-  color: #7777a8;
+  color: rgba(230,233,240,0.7);
 }
 
 /* ===== BUTTONS ===== */
 .btn {
-  padding: 10px 20px;
+  padding: 12px 22px;
   margin: 10px;
-  height: 40px;
-  width: 150px;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 14px;
   border: none;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-/* PRIMARY BUTTON */
+/* PRIMARY */
 .primary {
-  background: #505081;
-  color: #ffffff;
+  background: linear-gradient(135deg, #5B8CFF, #8BE9FD);
+  color: #0B0F1A;
+
+  box-shadow: 0 0 20px rgba(139,233,253,0.5);
 }
 
 .primary:hover {
-  background: #8686AC;
-  transform: translateY(-2px);
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(139,233,253,0.9);
 }
 
-/* SECONDARY BUTTON */
+/* SECONDARY */
 .secondary {
-  border: 1px solid #8686AC;
   background: transparent;
-  color: #ffffff;
+  border: 1px solid #5B8CFF;
+  color: #E6E9F0;
 }
 
 .secondary:hover {
-  background: rgba(134, 134, 172, 0.1);
+  background: rgba(91,140,255,0.15);
 }
 
 /* ===== MODULES ===== */
 .modules {
-  padding: 50px;
+  padding: 60px;
   text-align: center;
 }
 
-/* CARD CONTAINER */
+/* CARD CONTAINER FIX */
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px; /* spacing between cards */
+  margin-top: 30px;
 }
 
-/* 🧊 GLASS CARD */
+/* 💎 GLASS CARDS */
 .card {
-  background: rgba(80, 80, 129, 0.2);
+  background: rgba(255,255,255,0.05);
+
   margin: 10px;
   padding: 20px;
   width: 280px;
   height: 200px;
-  border-radius: 12px;
 
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(134, 134, 172, 0.2);
+  border-radius: 16px;
+
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 0 25px rgba(91,140,255,0.2);
 
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(91,140,255,0.4);
 }
 
 /* ===== PROCESS ===== */
 .process {
-  padding: 50px;
+  padding: 60px;
   text-align: center;
 }
 
@@ -159,19 +171,22 @@ body {
   justify-content: center;
 }
 
-/* STEP CARDS */
+/* STEP */
 .step {
-  background: rgba(80, 80, 129, 0.2);
+  background: rgba(255,255,255,0.05);
+
   margin: 10px;
   padding: 25px;
-  border-radius: 12px;
 
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(134, 134, 172, 0.2);
+  border-radius: 16px;
+
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.08);
 
   transition: 0.3s;
 }
 
 .step:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(91,140,255,0.3);
 }

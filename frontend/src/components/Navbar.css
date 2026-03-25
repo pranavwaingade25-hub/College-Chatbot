@@ -1,35 +1,43 @@
 /* ===============================
-   NAVBAR - PREMIUM STYLE
+   NAVBAR - FINAL PREMIUM
    =============================== */
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 14px 40px;
+  padding: 16px 50px;
 
-  background: rgba(18, 24, 43, 0.7); /* glass effect */
-  backdrop-filter: blur(12px);
+  background: rgba(18, 24, 43, 0.6);
+  backdrop-filter: blur(14px);
 
   border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
 }
 
-/* LOGO */
+/* 🔷 LOGO */
 .logo {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
 
   background: linear-gradient(90deg, #5B8CFF, #8BE9FD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1px;
 }
 
 /* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 35px;
 }
 
 /* LINKS */
@@ -37,27 +45,62 @@
   text-decoration: none;
   color: #E6E9F0;
   font-weight: 500;
-  transition: 0.3s;
+  font-size: 15px;
+
   position: relative;
+  transition: 0.3s;
 }
 
-/* HOVER */
+/* 🔥 HOVER EFFECT */
 .nav-links li a:hover {
   color: #8BE9FD;
+  text-shadow: 0 0 10px rgba(139,233,253,0.7);
 }
 
-/* 🔥 UNDERLINE ANIMATION */
+/* ✨ UNDERLINE ANIMATION */
 .nav-links li a::after {
   content: "";
   position: absolute;
+
   width: 0%;
   height: 2px;
+
   background: linear-gradient(90deg, #5B8CFF, #8BE9FD);
+
   left: 0;
-  bottom: -5px;
-  transition: 0.3s;
+  bottom: -6px;
+
+  transition: 0.3s ease;
 }
 
 .nav-links li a:hover::after {
   width: 100%;
+}
+
+/* 🎯 ACTIVE LINK */
+.nav-links li a.active {
+  color: #8BE9FD;
+}
+
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* 🔥 OPTIONAL CTA BUTTON (Login/Register) */
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #5B8CFF, #8BE9FD);
+  color: #0B0F1A;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(139,233,253,0.7);
 }

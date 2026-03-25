@@ -1,35 +1,40 @@
+/* ===============================
+   ADMIN PANEL - SAME UI SYSTEM
+=============================== */
 
 .admin-center {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+  /* 🌌 SAME BACKGROUND */
+  background: radial-gradient(circle at top, #1F2A44, #0B0F1A);
+
   font-family: "Segoe UI", sans-serif;
 }
 
+/* 💎 GLASS CARD */
 .admin-card {
   width: 95%;
   max-width: 1100px;
-  background: #ffffff;
-  border-radius: 18px;
+
+  border-radius: 20px;
   padding: 25px 30px 30px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-  animation: fadeUp 0.6s ease;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 40px rgba(91,140,255,0.3),
+    0 20px 80px rgba(0,0,0,0.8);
+
+  animation: float 5s ease-in-out infinite;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Header */
+/* HEADER */
 .admin-header {
   display: flex;
   justify-content: space-between;
@@ -39,25 +44,30 @@
 
 .admin-header h3 {
   margin: 0;
-  color: #2c5364;
+
+  background: linear-gradient(90deg, #5B8CFF, #8BE9FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* 🔥 LOGOUT BUTTON */
 .admin-header button {
   padding: 8px 16px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #ff512f, #dd2476);
+
+  background: linear-gradient(135deg, #FF7A5C, #ff9b85);
   color: white;
+
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .admin-header button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
-/* Navigation */
+/* NAVIGATION */
 .admin-nav {
   display: flex;
   gap: 12px;
@@ -67,104 +77,131 @@
 .admin-nav button {
   flex: 1;
   padding: 10px;
-  border: none;
+
   border-radius: 12px;
-  background: linear-gradient(135deg, #203a43, #2c5364);
-  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.05);
+  color: #E6E9F0;
+
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition: 0.3s;
 }
 
-/* Active / focused tab (NO JS needed) */
+/* ACTIVE TAB */
 .admin-nav button:focus {
   outline: none;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+  background: linear-gradient(135deg, #5B8CFF, #8BE9FD);
+  color: #0B0F1A;
+
+  box-shadow: 0 0 20px rgba(139,233,253,0.6);
 }
 
+/* HOVER */
 .admin-nav button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
-.admin-nav button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Content */
+/* CONTENT */
 .admin-content {
   margin-top: 10px;
 }
 
-/* Inputs */
+/* INPUTS */
 .admin-content input {
   width: 100%;
   padding: 10px 12px;
   margin-bottom: 10px;
+
   border-radius: 10px;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.05);
+  color: #E6E9F0;
+}
+
+.admin-content input::placeholder {
+  color: rgba(230,233,240,0.5);
 }
 
 .admin-content input:focus {
-  border-color: #2c5364;
-  box-shadow: 0 0 0 2px rgba(44, 83, 100, 0.15);
+  border-color: #5B8CFF;
+  box-shadow: 0 0 10px rgba(91,140,255,0.6);
+  outline: none;
 }
 
+/* ADD BUTTON */
 .admin-content > button {
   margin-bottom: 20px;
   padding: 10px 16px;
+
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5);
-  color: white;
+
+  background: linear-gradient(135deg, #5B8CFF, #8BE9FD);
+  color: #0B0F1A;
+
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .admin-content > button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(139,233,253,0.7);
 }
 
-/* Tables */
+/* 📊 TABLE - GLASS STYLE */
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #f9f9f9;
+
+  background: rgba(255,255,255,0.03);
   border-radius: 12px;
   overflow: hidden;
 }
 
+/* HEADER */
 thead {
-  background: linear-gradient(135deg, #203a43, #2c5364);
-  color: white;
+  background: rgba(255,255,255,0.05);
+  color: #8BE9FD;
 }
 
 th, td {
   padding: 12px;
-  text-align: left;
   font-size: 14px;
 }
 
-tr:nth-child(even) {
-  background: #f1f1f1;
+/* ROWS */
+tr {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Delete Button */
+tr:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+/* DELETE BUTTON */
 td button {
   padding: 6px 12px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+
+  background: linear-gradient(135deg, #FF7A5C, #ff9b85);
   color: white;
+
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 td button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,122,92,0.6);
+}
+
+/* FLOAT */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
