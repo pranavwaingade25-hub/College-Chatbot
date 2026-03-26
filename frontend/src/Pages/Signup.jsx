@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
+
 import "../Style/Signup.css";
 
 const Signup = () => {
@@ -92,6 +93,7 @@ const Signup = () => {
         <a href="/">Back to Home</a>
       </div>
     </div>
+  
   </>
   );
 };

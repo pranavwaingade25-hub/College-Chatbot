@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "../Style/Landing.css";
+
 
 export default function Landing() {
     const navigate = useNavigate();
@@ -102,6 +104,10 @@ export default function Landing() {
                     <div className="step">7. Display Result</div>
                 </div>
             </section>
+
+            <Footer/>
+
+
 
 
         </div>

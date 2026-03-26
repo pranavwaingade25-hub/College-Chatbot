@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import '../Style/adminDashboard.css';
+import Footer from "../components/Footer";
  
 const AdminDashboard = () => {
   const [view, setView] = useState("students");
@@ -131,6 +132,7 @@ const AdminDashboard = () => {
         </div>
       </div>
     </div>
+    <Footer/>
    </>
   );
 };

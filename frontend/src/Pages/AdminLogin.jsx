@@ -44,6 +44,19 @@ const AdminLogin = () => {
         <button onClick={handleLogin}>Login</button>
       </div>
     </div>
+    <section className="process">
+  <h2>Admin Workflow</h2>
+
+  <div className="steps">
+    <div className="step">1. Secure Login 🔐</div>
+    <div className="step">2. Dashboard Access 📊</div>
+    <div className="step">3. Student Management 👨‍🎓</div>
+    <div className="step">4. Notices Control 📢</div>
+    <div className="step">5. Timetable Updates 📅</div>
+    <div className="step">6. Event Management 🎉</div>
+    <div className="step">7. System Monitoring ⚙️</div>
+  </div>
+</section>
   </>
   );
 };

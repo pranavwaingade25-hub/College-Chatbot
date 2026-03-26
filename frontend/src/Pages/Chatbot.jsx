@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import "../Style/Chatbot.css";
+import Footer from "../components/Footer";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([
@@ -63,6 +64,7 @@ const Chatbot = () => {
         </div>
       </div>
     </div>
+    <Footer/>
    </>
   );
 };

@@ -106,3 +106,25 @@
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
+
+
+.step {
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW ANIMATION */
+.step::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(91,140,255,0.4), transparent);
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.step:hover::before {
+  left: 100%;
+}
