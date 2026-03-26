@@ -15,9 +15,10 @@ const StudentLogin = () => {
       if (res.data.success) {
         window.location.href = "/student-dashboard";
         localStorage.setItem("studentLoggedIn", "true");
-        localStorage.setItem("studentName", name);
-        localStorage.setItem("studentEmail", email);
-        localStorage.setItem("studentContact", contact);
+        localStorage.setItem("studentName", res.data.student.fullName);
+        localStorage.setItem("studentstd",res.data.student.std);
+      localStorage.setItem("studentEmail", res.data.student.email);
+      localStorage.setItem("studentContact", res.data.student.contact);
       }
     } catch (err) {
       setError("Invalid username or password");

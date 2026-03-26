@@ -7,6 +7,7 @@ import "../Style/Signup.css";
 const Signup = () => {
   const [form, setForm] = useState({
     fullName: "",
+    std:"",
     email: "",
     contact: "",
     username: "",
@@ -29,6 +30,7 @@ const Signup = () => {
       setMsg(res.data.message || "Registered successfully");
       setForm({
         fullName: "",
+        std:"",
         email: "",
         contact: "",
         username: "",
@@ -51,6 +53,14 @@ const Signup = () => {
             name="fullName"
             placeholder="Full Name"
             value={form.fullName}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="std"
+            type="std"
+            placeholder="Year"
+            value={form.std}
             onChange={handleChange}
             required
           />

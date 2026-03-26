@@ -17,6 +17,7 @@ const StudentDashboard = () => {
 
     // 👤 USER DATA
     const name = localStorage.getItem("studentName");
+    const std = localStorage.getItem("studentstd");
     const email = localStorage.getItem("studentEmail");
     const contact = localStorage.getItem("studentContact");
 
@@ -29,10 +30,11 @@ const StudentDashboard = () => {
         <>
             <Navbar />
             <div className="dashboard">
-
+                  <br></br>
+                
                 {/* HEADER */}
                 <div className="dash-header">
-                    <h2>🎓 Student Dashboard </h2>
+                    <h2>🎓 Student Dashboard </h2> <br></br>
                     <div className="actions">
                         <button className="btn chatbot-btn" onClick={() => navigate("/chatbot")}>
                             🤖 Chatbot
@@ -45,18 +47,19 @@ const StudentDashboard = () => {
 
                     
                 </div>
-
+                   <br></br>
                 {/* PROFILE CARD */}
                 <div className="card profile">
                     <h3>👤 Student Info</h3>
                     <p><b>Name:</b> {name}</p>
+                    <p> <b>Std:</b> {std}</p>
                     <p><b>Email:</b> {email}</p>
                     <p><b>Contact:</b> {contact}</p>
                 </div>
-
+                 <br></br>
                 {/* GRID */}
                 <div className="grid">
-
+                  
                     {/* NOTICES */}
                     <div className="card">
                         <h3>📢 Daily Notices</h3>

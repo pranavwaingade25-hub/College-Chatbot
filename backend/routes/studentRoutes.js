@@ -4,7 +4,7 @@ const Student = require("../models/Student");
 
 /* REGISTER */
 router.post("/register", async (req, res) => {
-  const { fullName, email, contact, username, password } = req.body;
+  const { fullName, std, email, contact, username, password } = req.body;
 
   const exists = await Student.findOne({ username });
   if (exists) {
@@ -13,6 +13,7 @@ router.post("/register", async (req, res) => {
 
   const student = new Student({
     fullName,
+    std,
     email,
     contact,
     username,
