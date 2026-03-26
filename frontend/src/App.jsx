@@ -8,6 +8,7 @@ import Chatbot from "./Pages/Chatbot";
 import AdminDashboard from "./Pages/AdminDashboard";
 import Signup from "./Pages/Signup";
 import Landing from "./Pages/landing";
+import StudentDashboard from "./Pages/StudentDashboard";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
       </Routes>
     </BrowserRouter>
   );

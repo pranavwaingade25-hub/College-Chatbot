@@ -37,7 +37,7 @@ const Chatbot = () => {
       <div className="chat-card">
         <div className="chat-header">
           <h3>College Chatbot</h3>
-          <button onClick={() => (window.location.href = "/")}>Logout</button>
+          <button onClick={() => (window.location.href = "/student-dashboard")}>Back</button>
         </div>
 
         <div className="chat-body">

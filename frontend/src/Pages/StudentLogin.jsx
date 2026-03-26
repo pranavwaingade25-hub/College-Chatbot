@@ -13,12 +13,17 @@ const StudentLogin = () => {
       const res = await axios.post("http://localhost:5000/api/students/login", { username, password });
 
       if (res.data.success) {
-        window.location.href = "/chatbot";
+        window.location.href = "/student-dashboard";
+        localStorage.setItem("studentLoggedIn", "true");
+        localStorage.setItem("studentName", name);
+        localStorage.setItem("studentEmail", email);
+        localStorage.setItem("studentContact", contact);
       }
     } catch (err) {
       setError("Invalid username or password");
     }
   };
+
 
   return (
     <>
@@ -41,6 +46,7 @@ const StudentLogin = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            
             <button onClick={handleLogin}>Login</button>
             {error && <p className="error">{error}</p>}
           </div>
