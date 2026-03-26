@@ -50,22 +50,11 @@ It also provides an Admin Panel where administrators can manage student data, no
 
 ## ⚙️ Installation
 
-1. Clone the repository:
-   git clone https://github.com/your-username/college-chatbot.git
-
-2. Install frontend dependencies:
-   cd frontend
-   npm install
-
-3. Install backend dependencies:
-   cd backend
-   npm install
-
-4. Start backend server:
-   node index.js
-
-5. Start frontend:
-   npm run dev
+1. Clone the repository: git clone https://github.com/pranavwaingade25-hub/College-Chatbot.git
+2. Install frontend dependencies: cd frontend npm install
+3. Install backend dependencies: cd backend npm install
+4. Start backend server: node index.js
+5. Start frontend: npm run dev
 
 
 ## 🔄 Working Process
