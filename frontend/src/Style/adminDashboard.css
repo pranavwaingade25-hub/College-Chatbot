@@ -205,3 +205,88 @@ td button:hover {
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
+
+
+.form-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.form-section input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-section button {
+  padding: 10px 16px;
+  background: #4da6ff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-section button:hover {
+  background: #3399ff;
+}
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+}
+
+table button {
+  padding: 6px 12px;
+  background: #ff6b6b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+table button:hover {
+  background: #ff4d4d;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-section textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  resize: none;
+  height: 40px;
+}
+
+.form-section input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.form-section button {
+  background: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
