@@ -111,7 +111,7 @@ const StudentDashboard = () => {
             <h3>📢 Daily Notices</h3>
             <ul>
               {notices.length === 0 ? (
-                <p>No notices available</p>
+                <li>No notices available</li>
               ) : (
                 notices.slice(0, 3).map((n) => (
                   <li key={n._id}>
@@ -127,7 +127,7 @@ const StudentDashboard = () => {
             <h3>📅 Timetable</h3>
             <ul>
               {timetable.length === 0 ? (
-                <p>No timetable available</p>
+                <li>No timetable available</li>
               ) : (
                 timetable.map((t) => (
                   <li key={t._id}>
@@ -143,7 +143,7 @@ const StudentDashboard = () => {
             <h3>🎉 Events</h3>
             <ul>
               {events.length === 0 ? (
-                <p>No events available</p>
+                <li>No events available</li>
               ) : (
                 events.slice(0, 3).map((e) => (
                   <li key={e._id}>
