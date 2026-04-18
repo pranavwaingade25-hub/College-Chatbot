@@ -44,9 +44,11 @@ const StudentDashboard = () => {
   };
 
   const fetchTimetable = async () => {
-    const res = await axios.get("http://localhost:5000/api/timetable");
-    setTimetable(res.data);
-  };
+  const res = await axios.get(
+    `http://localhost:5000/api/timetable/${std}`
+  );
+  setTimetable(res.data);
+};
 
   // 🔄 LOAD DATA
   useEffect(() => {

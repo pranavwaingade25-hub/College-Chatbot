@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 
 const AdminDashboard = () => {
   const [view, setView] = useState("students");
+  const [std, setStd] = useState("");
 
   // DATA STATES
   const [students, setStudents] = useState([]);
@@ -13,6 +14,8 @@ const AdminDashboard = () => {
   const [events, setEvents] = useState([]);
   const [notices, setNotices] = useState([]);
   const [timetable, setTimetable] = useState([]);
+  const [isEdit, setIsEdit] = useState(false);
+  const [editId, setEditId] = useState(null);
 
   // FORM STATES
   const [question, setQuestion] = useState("");
@@ -126,18 +129,57 @@ const AdminDashboard = () => {
     fetchNotices();
   };
 
-  const addTimetable = async () => {
-    if (!day || !subject || !time) return;
-    await axios.post("http://localhost:5000/api/timetable", {
-      day, subject, time,
-    });
-    fetchTimetable();
-    setDay(""); setSubject(""); setTime("");
-  };
+  const handleTimetable = async () => {
+  console.log("Clicked"); // 🔥 check this first
 
-  const deleteTimetable = async (id) => {
-    await axios.delete(`http://localhost:5000/api/timetable/${id}`);
+  if (!std || !day || !subject || !time) {
+    console.log("Missing fields");
+    return;
+  }
+
+  try {
+    if (isEdit) {
+      console.log("Updating...");
+
+      await axios.put(
+        `http://localhost:5000/api/timetable/${editId}`,
+        { std, day, subject, time }
+      );
+    } else {
+      console.log("Adding...");
+
+      await axios.post("http://localhost:5000/api/timetable", {
+        std,
+        day,
+        subject,
+        time,
+      });
+    }
+
     fetchTimetable();
+
+    setStd("");
+    setDay("");
+    setSubject("");
+    setTime("");
+    setIsEdit(false);
+    setEditId(null);
+
+  } catch (err) {
+    console.error("Error:", err);
+  }
+};
+
+
+  const handleEdit = (t) => {
+    setIsEdit(true);
+    setEditId(t._id);
+
+    // fill form
+    setStd(t.std);
+    setDay(t.day);
+    setSubject(t.subject);
+    setTime(t.time);
   };
 
   // ================= UI =================
@@ -147,7 +189,8 @@ const AdminDashboard = () => {
       <div className="admin-center">
         <div className="admin-card">
 
-          <h2>Admin Dashboard</h2>
+          <h2 style={{color:"white"}}>Admin Dashboard</h2>
+          <br />
 
           <div className="admin-nav">
             <button onClick={() => setView("students")}>Students</button>
@@ -329,6 +372,12 @@ const AdminDashboard = () => {
           {view === "timetable" && (
             <>
               <div className="form-section">
+                <select value={std} onChange={(e) => setStd(e.target.value)}>
+                  <option value="">Select Class</option>
+                  <option value="FY">FY</option>
+                  <option value="SY">SY</option>
+                  <option value="TY">TY</option>
+                </select>
                 <select
                   value={day}
                   onChange={(e) => setDay(e.target.value)}
@@ -354,7 +403,9 @@ const AdminDashboard = () => {
                   onChange={(e) => setTime(e.target.value)}
                 />
 
-                <button onClick={addTimetable}>Add</button>
+                <button onClick={handleTimetable}>
+                  {isEdit ? "Update" : "Add"}
+                </button>
               </div>
 
               <table>
@@ -363,6 +414,7 @@ const AdminDashboard = () => {
                     <th>#</th>
                     <th>Day</th>
                     <th>Subject</th>
+                    <th>STD</th>
                     <th>Time</th>
                     <th>Action</th>
                   </tr>
@@ -373,10 +425,12 @@ const AdminDashboard = () => {
                       <td>{i + 1}</td>
                       <td>{t.day}</td>
                       <td>{t.subject}</td>
+                      <td>{t.std}</td>
                       <td>{t.time}</td>
                       <td>
+                        <button onClick={() => handleEdit(t)}>✏️</button> <></>
                         <button onClick={() => deleteTimetable(t._id)}>
-                          Delete
+                          Delete🗑️
                         </button>
                       </td>
                     </tr>
